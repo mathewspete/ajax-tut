@@ -14,63 +14,7 @@ let newUser = {
 
 let allUsers = [];
 
-
-let array = [
-    {
-      id: 1,
-      username: "mathews225",
-      password: "pm123",
-      firstname: "Peter",
-      lastname: "Mathews",
-      phone: "5133215555",
-      email: "name@email.com",
-      isReviewer: true,
-      isAdmin: true
-    },
-    {
-      id: 3,
-      username: "mathews2252",
-      password: "pm123",
-      firstname: "Pete",
-      lastname: "Mathews",
-      phone: "5135551234",
-      email: "user@email.com",
-      isReviewer: true,
-      isAdmin: true
-    },
-    {
-      id: 5,
-      username: "mathews2",
-      password: "pm123",
-      firstname: "Pete",
-      astname: "Mathews",
-      phone: "5135551234",
-      email: "user@email.com",
-      isReviewer: true,
-      isAdmin: true
-    },
-    {
-      id: 6,
-      username: "Legend3D",
-      password: " 0319-078",
-      firstname: "Jeremy",
-      lastname: "Kovak",
-      phone: "6735551234",
-      email: "user8989@email.com",
-      isReviewer: false,
-      isAdmin: false
-    }
-  ]
-
-
 $().ready(()=>{
-
-/*
-for (var a of array){
-    for (o in a )
-    console.log(o);
-}
-*/
 
     userList()
         .done((users)=>{
@@ -106,7 +50,7 @@ const display = (users) => {
     for (let user of users) {
         header = "";
         let td;
-        for( prop in user ) {
+        for (prop in user) {
             header += `<th>${prop}</th>`;
             td += (`<td>${user[prop]}</td>`);
         }
